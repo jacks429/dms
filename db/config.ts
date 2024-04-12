@@ -146,7 +146,7 @@ const Churches = defineTable({
   columns: {
     ICO: column.text(),
     Date_of_Establishment: column.date(), // You might want to consider using a date type if you need date validation
-    Date_of_Termination: column.date(),
+    Date_of_Termination: column.date({ optional: true }),
     Form: column.text(),
     SKNACE: column.text(),
     Name: column.text(),
@@ -163,7 +163,7 @@ const Churches = defineTable({
     Statutory_Body_Name: column.text(),
     Statutory_Body_Surname: column.text(),
     Statutory_Body_Date_of_Birth: column.date(), // Consider using a date type
-    Statutory_Body_Effective_From: column.text(), // Consider using a date type
+    Statutory_Body_Effective_From: column.date(), // Consider using a date type
   }
 });
 
@@ -187,5 +187,5 @@ const Museums = defineTable({
 });
 
 export default defineDb({
-  tables: {PlatformProvider, Rebroadcaster, AVMS, Broadcaster, TelevisionBroadcaster, Churches, Museums }, 
+  tables: {User, Session, Comment, PlatformProvider, Rebroadcaster, AVMS, Broadcaster, TelevisionBroadcaster, Churches, Museums }, 
 });
