@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@astrojs/db": "^0.10.4",
+		"@astrojs/node": "^8.2.5",
 		"@astrojs/sitemap": "^1.1.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"@faker-js/faker": "^7.6.0",

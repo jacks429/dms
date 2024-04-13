@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import db from "@astrojs/db";
+import node from "@astrojs/node";
 const DEV_PORT = 2121;
 
 
@@ -20,5 +21,9 @@ export default defineConfig({
   },
   integrations: [
   //
-  sitemap(), tailwind(), db()]
+  sitemap(), tailwind(), db()],
+  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });
