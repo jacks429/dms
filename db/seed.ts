@@ -352,7 +352,7 @@ export default async function () {
 	]);
 	await db.insert(Churches).values([{
 		ICO: "12345678",
-		Date_of_Establishment: new Date("2000-01-01"),
+		Date_of_Establishment: "2000-01-01",
 		Date_of_Termination: null,
 		Form: "Religious Association",
 		SKNACE: "12345",
@@ -365,17 +365,17 @@ export default async function () {
 		Address_Post_Office: "Anytown Post Office",
 		Church_Founder: "John Doe",
 		Registration_Number: 987654,
-		Registration_Date: new Date("2000-01-01"),
+		Registration_Date: "2000-01-01",
 		Statutory_Body: "Board of Trustees",
 		Statutory_Body_Name: "Jane",
 		Statutory_Body_Surname: "Smith",
-		Statutory_Body_Date_of_Birth: new Date("1980-05-10"),
-		Statutory_Body_Effective_From: new Date("2020-01-01")
+		Statutory_Body_Date_of_Birth: "1980-05-10",
+		Statutory_Body_Effective_From: "2020-01-01"
 	},
 	{
 		ICO: "87654321",
-		Date_of_Establishment: new Date("1995-03-15"),
-		Date_of_Termination: new Date("2005-03-15"),
+		Date_of_Establishment: "1995-03-15",
+		Date_of_Termination: "2005-03-15",
 		Form: "Religious Association",
 		SKNACE: "54321",
 		Name: "Grace Community Church",
@@ -387,16 +387,16 @@ export default async function () {
 		Address_Post_Office: "Othertown Post Office",
 		Church_Founder: "Emma Johnson",
 		Registration_Number: 654321,
-		Registration_Date: new Date("1995-03-15"),
+		Registration_Date: "1995-03-15",
 		Statutory_Body: "Church Council",
 		Statutory_Body_Name: "Michael",
 		Statutory_Body_Surname: "Chen",
-		Statutory_Body_Date_of_Birth: new Date("1975-08-20"),
-		Statutory_Body_Effective_From: new Date("2018-01-01")
+		Statutory_Body_Date_of_Birth: "1975-08-20",
+		Statutory_Body_Effective_From: "2018-01-01"
 	},
 	{
 		ICO: "56789123",
-		Date_of_Establishment: new Date("1980-10-20"),
+		Date_of_Establishment: "1980-10-20",
 		Date_of_Termination: null,
 		Form: "Religious Association",
 		SKNACE: "98765",
@@ -409,12 +409,12 @@ export default async function () {
 		Address_Post_Office: "Smalltown Post Office",
 		Church_Founder: "David Williams",
 		Registration_Number: 345678,
-		Registration_Date: new Date("1980-10-20"),
+		Registration_Date: "1980-10-20",
 		Statutory_Body: "Church Elders",
 		Statutory_Body_Name: "William",
 		Statutory_Body_Surname: "Jones",
-		Statutory_Body_Date_of_Birth: new Date("1965-04-15"),
-		Statutory_Body_Effective_From: new Date("2015-01-01")
+		Statutory_Body_Date_of_Birth: "1965-04-15",
+		Statutory_Body_Effective_From: "2015-01-01"
 	}
 	]);
 	await db.insert(Museums).values([{
@@ -431,7 +431,7 @@ export default async function () {
 		Business_ID_ICO: 67890,
 		Founder_Established_by: "John Smith",
 		Legal_Entity_Name: "National History Museum Ltd.",
-		Date_of_Registration: new Date("1990-05-15"),
+		Date_of_Registration: "1990-05-15",
 		Type: "Natural History"
 	},
 	{
@@ -448,7 +448,7 @@ export default async function () {
 		Business_ID_ICO: 98765,
 		Founder_Established_by: "Napoleon Bonaparte",
 		Legal_Entity_Name: "Louvre Museum",
-		Date_of_Registration: new Date("1793-08-10"),
+		Date_of_Registration: "1793-08-10",
 		Type: "Art"
 	},
 	{
@@ -465,7 +465,7 @@ export default async function () {
 		Business_ID_ICO: 54321,
 		Founder_Established_by: "James Smithson",
 		Legal_Entity_Name: "Smithsonian Institution",
-		Date_of_Registration: new Date("1846-08-10"),
+		Date_of_Registration: "1846-08-10",
 		Type: "Various"
 	}
 	]);

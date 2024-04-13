@@ -149,8 +149,8 @@ const TelevisionBroadcaster = defineTable({
 const Churches = defineTable({
   columns: {
     ICO: column.text(),
-    Date_of_Establishment: column.date(), // You might want to consider using a date type if you need date validation
-    Date_of_Termination: column.date({ optional: true }),
+    Date_of_Establishment: column.text(), // You might want to consider using a date type if you need date validation
+    Date_of_Termination: column.text({optional: true}),
     Form: column.text(),
     SKNACE: column.text(),
     Name: column.text(),
@@ -162,12 +162,12 @@ const Churches = defineTable({
     Address_Post_Office: column.text(),
     Church_Founder: column.text(),
     Registration_Number: column.number(),
-    Registration_Date: column.date(),
+    Registration_Date: column.text(),
     Statutory_Body: column.text(),
     Statutory_Body_Name: column.text(),
     Statutory_Body_Surname: column.text(),
-    Statutory_Body_Date_of_Birth: column.date(), // Consider using a date type
-    Statutory_Body_Effective_From: column.date(), // Consider using a date type
+    Statutory_Body_Date_of_Birth: column.text(), // Consider using a date type
+    Statutory_Body_Effective_From: column.text(), // Consider using a date type
   }
 });
 
@@ -185,7 +185,7 @@ const Museums = defineTable({
     Business_ID_ICO: column.number(),
     Founder_Established_by: column.text(),
     Legal_Entity_Name: column.text(),
-    Date_of_Registration: column.date(), // You might want to consider using a date type if you need date validation
+    Date_of_Registration: column.text(), // You might want to consider using a date type if you need date validation
     Type: column.text(),
   }
 });

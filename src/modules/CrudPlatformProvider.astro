@@ -1,14 +1,13 @@
 ---
 /* eslint max-lines: 'off' */
 
-import NavPagination from "../components/NavPagination.astro"
-import {db, Churches} from 'astro:db'
+import {db, PlatformProvider} from 'astro:db'
 
-const churches = await db.select().from(Churches)
+const PlatformProviders = await db.select().from(PlatformProvider)
 
 ---
 
-<entities-crud type="churches">
+<entities-crud type="PlatformProviders">
 	<div
 		class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5 dark:bg-gray-800 dark:border-gray-700"
 	>
@@ -68,7 +67,7 @@ const churches = await db.select().from(Churches)
 								>
 								<span
 									class="ml-1 text-gray-400 md:ml-2 dark:text-gray-500"
-									aria-current="page">Churches</span
+									aria-current="page">PlatformProvider</span
 								>
 							</div>
 						</li>
@@ -77,7 +76,7 @@ const churches = await db.select().from(Churches)
 				<h1
 					class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white"
 				>
-					Registered Churches
+					Registered Platform Providers
 				</h1>
 			</div>
 			<div class="items-center justify-between block sm:flex">
@@ -87,10 +86,10 @@ const churches = await db.select().from(Churches)
 						<div class="relative w-48 mt-1 sm:w-64 xl:w-96">
 							<input
 								type="text"
-								name="church"
-								id="churches-search"
+								name="PlatformProviders"
+								id="PlatformProviders-search"
 								class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-								placeholder="Search for registered churches"
+								placeholder="Search for registered PlatformProviders"
 							/>
 						</div>
 					</form>
@@ -184,15 +183,12 @@ const churches = await db.select().from(Churches)
 
 								{
 									[
-										'Registration Number',
-										'Name',
-										'Date of Establishment',
-										'Date of Termination',
-										'Form',
-										'SKNACE',
-										'Address',
-										'Church Founder',
-										'Registration Date'
+										'First Name',
+										'Last Name',
+										'Date Of Birth',
+										'Nationality',
+										'Website',
+										'Application Specification'
 									].map((th) => (
 										<th
 											scope="col"
@@ -208,58 +204,40 @@ const churches = await db.select().from(Churches)
 							class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
 						>
 							{
-								churches.map((church) => (
+								PlatformProviders.map((PlatformProvider) => (
 									<tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
 										<td class="w-4 p-4">
 											<div class="flex items-center">
 												<input
-													id={`checkbox-${church.Registration_Number}`}
+													id={`checkbox-${PlatformProvider.First_name}`}
 													aria-describedby="checkbox-1"
 													type="checkbox"
 													class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
 												/>
-												<label for={`checkbox-${church.Registration_Number}`} class="sr-only">
+												<label for={`checkbox-${PlatformProvider.First_name}`} class="sr-only">
 													checkbox
 												</label>
 											</div>
 										</td>
 										<td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
 											<div class="text-base font-semibold text-gray-900 dark:text-white">
-												<data value="registration_number">{church.Registration_Number}</data>
+												<data value="registration_number">{PlatformProvider.First_name}</data>
 											</div>
-											<!--
-												<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
-													<data value="category">{product.category}</data>
-												</div>
-											-->
 										</td>
 										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Name">{church.Name}</data>
+											<data value="Name">{PlatformProvider.Last_name}</data>
 										</td>
 										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Date_of_Establishment">{church.Date_of_Establishment}</data>
+											<data value="Form">{PlatformProvider.Date_of_Birth}</data>
 										</td>
 										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Date_of_Termination">
-												{
-													church.Date_of_Termination
-												}
-												</data>
+											<data value="Address">{PlatformProvider.Nationality}</data>
 										</td>
 										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Form">{church.Form}</data>
+											<data value="Registration_Date">{PlatformProvider.Website}</data>
 										</td>
 										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="SKNACE">{church.SKNACE}</data>
-										</td>
-										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Address">{church.Address}</data>
-										</td>
-										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Church_Founder">{church.Church_Founder}</data>
-										</td>
-										<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-											<data value="Registration_Date">{church.Registration_Date}</data>
+											<data value="Registration_Date">{PlatformProvider.Application_Specification}</data>
 										</td>
 									</tr>
 								))
