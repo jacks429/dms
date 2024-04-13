@@ -31,7 +31,7 @@
 	"scripts": {
 		"astro": "astro",
 		"build": "astro build --remote",
-		"dev": "astro dev",
+		"dev": "astro dev"
 	},
 	"dependencies": {
 		"@astrojs/db": "^0.10.4",
