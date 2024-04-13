@@ -30,7 +30,7 @@
 	"type": "module",
 	"scripts": {
 		"astro": "astro",
-		"build": "astro build",
+		"build": "astro build --remote",
 		"dev": "astro dev",
 		"preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs"
 	},
