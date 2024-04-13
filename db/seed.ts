@@ -1,4 +1,4 @@
-import { AVMS, Broadcaster, Churches, db, Museums, PlatformProvider, Rebroadcaster, TelevisionBroadcaster, User } from 'astro:db';
+import { AVMS, Broadcaster, Churches, db, Museums, PlatformProvider, Rebroadcaster, TelevisionBroadcaster, User, RegisterSchema } from 'astro:db';
 
 export default async function () {
 	await db.insert(User).values([
@@ -468,5 +468,151 @@ export default async function () {
 		Date_of_Registration: "1846-08-10",
 		Type: "Various"
 	}
+	]);
+	await db.insert(RegisterSchema).values([
+		{
+			id: 1,
+			Sector: "Museums",
+			ExistingRegisters: "Register of Museums and Galleries of the Slovak Republic",
+			EntityCount: 118,
+			EstimatedCompleteness: 100,
+			TotalEntityCount: 118
+		},
+		{
+			id: 2,
+			Sector: "Libraries",
+			ExistingRegisters: "List of Libraries",
+			EntityCount: 5306,
+			EstimatedCompleteness: 100,
+			TotalEntityCount: 5306
+		},
+		{
+			id: 3,
+			Sector: "Monuments",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 4,
+			Sector: "Traditional Culture",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 5,
+			Sector: "Theater, Dance",
+			ExistingRegisters: "Evidence of Theaters and Evidence of Music Institutions",
+			EntityCount: 63,
+			EstimatedCompleteness: 30.6,
+			TotalEntityCount: 63
+		},
+		{
+			id: 7,
+			Sector: "Visual Arts",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 8,
+			Sector: "Literature",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 9,
+			Sector: "Media",
+			ExistingRegisters: "Evidence of Periodic Press",
+			EntityCount: 108,
+			EstimatedCompleteness: 87.2,
+			TotalEntityCount: 108
+		},
+		{
+			id: 10,
+			Sector: "Audiovisual",
+			ExistingRegisters: "Providers of Audiovisual Media Service",
+			EntityCount: 348,
+			EstimatedCompleteness: 21.1,
+			TotalEntityCount: 348
+		},
+		{
+			id: 11,
+			Sector: "Gaming Industry",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 12,
+			Sector: "Architecture",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 13,
+			Sector: "Design",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 14,
+			Sector: "Amatuer Artistic Activity",
+			ExistingRegisters: "List of ZUČ Groups and Individuals",
+			EntityCount: 556,
+			EstimatedCompleteness: 100,
+			TotalEntityCount: 556
+		},
+		{
+			id: 15,
+			Sector: "Education of Professionals in Culture",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 16,
+			Sector: "Culture of National Minorities",
+			ExistingRegisters: "Evidence of Cultural Organizations of National Minorities",
+			EntityCount: 282,
+			EstimatedCompleteness: 26,
+			TotalEntityCount: 282
+		},
+		{
+			id: 17,
+			Sector: "Cultures of Disadvantaged Groups",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 18,
+			Sector: "State Language and Communication",
+			ExistingRegisters: "N/A",
+			EntityCount: 0,
+			EstimatedCompleteness: 0,
+			TotalEntityCount: 0
+		},
+		{
+			id: 19,
+			Sector: "Church",
+			ExistingRegisters: "Register of Churches and Religious Societies",
+			EntityCount: 2961,
+			EstimatedCompleteness: 100,
+			TotalEntityCount: 2961
+		}
 	]);
 }

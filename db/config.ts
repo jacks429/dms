@@ -190,6 +190,17 @@ const Museums = defineTable({
   }
 });
 
+const RegisterSchema = defineTable({
+	columns: {
+		id: column.number(),
+		Sector: column.text(),
+		ExistingRegisters: column.text(),
+		EntityCount: column.number(),
+		EstimatedCompleteness: column.number(),
+		TotalEntityCount: column.number()
+	}
+});
+
 export default defineDb({
-  tables: {User, Session, Comment, PlatformProvider, Rebroadcaster, AVMS, Broadcaster, TelevisionBroadcaster, Churches, Museums }, 
+  tables: {User, Session, Comment, PlatformProvider, Rebroadcaster, AVMS, Broadcaster, TelevisionBroadcaster, Churches, Museums, RegisterSchema }, 
 });
