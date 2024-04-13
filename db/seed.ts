@@ -2,9 +2,30 @@ import { AVMS, Broadcaster, Churches, db, Museums, PlatformProvider, Rebroadcast
 
 export default async function () {
 	await db.insert(User).values([
-		{ id: 0, username: 'Hub3r' },
-		{ id: 1, username: 'jacks429' },
-		{ id: 2, username: 'Artem1s' }
+		{
+			id: 0,
+			name: 'Hub3r',
+			avatar: 'neil-sims.png',
+			email: 'neil.sims@flowbite.com',
+			country: 'United States',
+			status: 'Active'
+		},
+		{
+			id: 1,
+			name: 'jacks429',
+			avatar: 'neil-sims.png',
+			email: 'neil.sims@flowbite.com',
+			country: 'United States',
+			status: 'Active'
+		},
+		{
+			id: 2,
+			name: 'Artem1s',
+			avatar: 'neil-sims.png',
+			email: 'neil.sims@flowbite.com',
+			country: 'Slovakia',
+			status: 'Offline'
+		}
 	]);
 	await db.insert(PlatformProvider).values([
 		{

@@ -20,5 +20,8 @@ export function getUsers(randomize = RANDOMIZE) {
 		  })
 		: usersStaticData;
 
+		// console.log(users);
+		// console.log(result);
+
 	return result;
 }
