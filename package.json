@@ -38,7 +38,7 @@
 	"dependencies": {
 		"@astrojs/db": "^0.10.4",
 		"@astrojs/sitemap": "^1.1.0",
-		"@astrojs/tailwind": "^3.0.1",
+		"@astrojs/tailwind": "^5.1.0",
 		"@faker-js/faker": "^7.6.0",
 		"apexcharts": "^3.37.2",
 		"astro": "^4.5",
