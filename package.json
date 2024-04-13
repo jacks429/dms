@@ -32,11 +32,9 @@
 		"astro": "astro",
 		"build": "astro build --remote",
 		"dev": "astro dev",
-		"preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs"
 	},
 	"dependencies": {
 		"@astrojs/db": "^0.10.4",
-		"@astrojs/deno": "^5.0.1",
 		"@astrojs/sitemap": "^1.1.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"@faker-js/faker": "^7.6.0",
