@@ -1,7 +1,6 @@
 ---
 /* eslint max-lines: 'off' */
 
-import NavPagination from "../components/NavPagination.astro"
 import {db, Museums} from 'astro:db'
 
 const museums = await db.select().from(Museums)

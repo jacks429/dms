@@ -1,297 +1,105 @@
-# [Flowbite Astro Admin Dashboard](https://themesberg.github.io/flowbite-astro-admin-dashboard/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fflowbite-astro-admin-dashboard&text=Check%20out%20this%20open-source%20admin%20dashboard%20built%20with%20Flowbite%2C%20Astro%20and%20Tailwind%20CSS)
-
-<!-- NOTE: This is a Tailwind in MD experiment, to make it nice when rendered with Astro -->
-<div align="center" class="flex flex-wrap justify-evenly w-full">
-	<a href="https://github.com/themesberg/flowbite-astro-admin-dashboard"><img src="https://img.shields.io/badge/version-v1.0.2-blue" alt="version"></a>
-	<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
-	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues open"></a>
-	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
-</div>
-
-<a class="hidden" href="https://themesberg.github.io/flowbite-astro-admin-dashboard/"><img class="w-full rounded-md overflow-hidden" src="https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png" alt="Flowbite Admin Dashboard Live Preview"></a>
-
-This project is a free and open-source UI admin dashboard template built with the components from [Flowbite](https://github.com/themesberg/flowbite) and based on the utility-first [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
-
-This admin dashboard can quickly help you get started building an application for your project using the newest UI/UX development technologies in the open-source area including Tailwind CSS and Flowbite.
-
----
-
-<div align="center" class="flex flex-wrap justify-evenly w-full my-16">
-	<a href="https://stackblitz.com/github/themesberg/flowbite-astro-admin-dashboard"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open in StackBlitz"></a>
-	<a href="https://codesandbox.io/p/github/themesberg/flowbite-astro-admin-dashboard/main"><img src="https://assets.codesandbox.io/github/button-edit-lime.svg" alt="Open with CodeSandbox"></a>
-</div>
-
-<div class="hidden">
-
----
-
-## Table of Contents
-
-<details><summary>Click to expand</summary>
-
-- [Table of Contents](#table-of-contents)
-- [🕹 Demo pages](#-demo-pages)
-- [🌀 Built with Flowbite](#-built-with-flowbite)
-- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-- [📊 15 example pages](#-15-example-pages)
-- [🧱 Advanced components](#-advanced-components)
-- [📚 Flowbite documentation](#-flowbite-documentation)
-- [👨‍🚀 Development](#-development)
-  - [⚙️ Workflow](#️-workflow)
-  - [🚀 Quick start](#-quick-start)
-  - [Project Structure](#project-structure)
-  - [🛠 Tools](#-tools)
-- [Browser Support](#browser-support)
-- [Resources](#resources)
-  - [JavaScript Frameworks](#javascript-frameworks)
-  - [Back-end Frameworks](#back-end-frameworks)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions)
-- [Licensing](#licensing)
-- [Useful Links](#useful-links)
-- [Authors](#authors)
-
-</details>
-
----
-
-</div>
-
-<div class="hidden">
-
-## 🕹 Demo pages
-
-| Dashboard                                                                                                                                                             | Stacked Layout                                                                                                                                                                            | Products (CRUD)                                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/) | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/layouts/stacked/) | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/crud/products/) |
-
-| Users (CRUD)                                                                                                                                                                     | Settings                                                                                                                                                                      | Pricing page                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/crud/users/) | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/settings/) | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/pricing/) |
-
-| Login page                                                                                                                                                                                 | Register page                                                                                                                                                                                    | Reset password                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/reset-password/) |
-
-| Forgot password                                                                                                                                                                                                   | Profile lock                                                                                                                                                                                             | Maintenance page                                                                                                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/forgot-password/) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/profile-lock/) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/maintenance/) |
-
-| 404 not found                                                                                                                                                                  | 500 server error                                                                                                                                                                  | Playground                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/404/) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/500/) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/playground/sidebar/) |
-
-- [Live Preview](http://themesberg.github.io/flowbite-astro-admin-dashboard/)
-</div>
-
-## 🌀 Built with Flowbite
-
-The interactive components such as the navbars, modals, drawers, and tooltips are all based on the popular [open-source component library called Flowbite](https://flowbite.com/) which enables us to use these elements by creating more complex set of pages and widgets inside a fully-fledged admin dashboard template.
-
-## 💨 Tailwind CSS utility classes
-
-All of the pages, widgets, and components are solely based on the utility-first classes from Tailwind CSS and it is compatible with the latest `v3.x` of the technology by automatically purging all of the classes based on the template paths.
-
-## 📊 15 example pages
-
-Get started with 15 advanced examples pages including two different layouts of a dashboard's homepage full of charts widgets, tables, datepickers, and statistics and also with two CRUD layout pages for products, users, a settings page, authentication pages for login and register and even custom 404 and 500 error pages.
-
-## 🧱 Advanced components
-
-This admin dashboard contains many advanced components both from Flowbite but also from other third-party libraries such as ApexCharts which have been customly tailored with Tailwind CSS classes and designed based on the [Flowbite Design System](https://flowbite.com/figma/).
-
-## 📚 Flowbite documentation
-
-If you want to use this project we recommend to also [study the component library](https://flowbite.com/docs/getting-started/introduction/) that we used to build this dashboard because you can use even more components from that library to enhance the examples that we've coded here already.
-
-## 👨‍🚀 Development
-
-### ⚙️ Workflow
-
-This product is built using the following widely used technologies:
-
-- Tailwind CSS: [tailwindcss.com](https://tailwindcss.com/)
-- Flowbite: [flowbite.com](http://flowbite.com/)
-- Astro: [astro.build](https://astro.build/)
-
-### 🚀 Quick start
-
-1. Clone this repository or download the ZIP file
-2. Make sure that you have **Node.js** and NPM, PNPM or Yarn installed
-3. Install the project dependencies from the `package.json` file:
-
-```sh
-pnpm install
-# or
-npm install
-# or
-yarn
-```
-
-_PNPM is the package manager of choice for illustration, but you can use what you want._
-
-1. Launch the Astro local development server on `localhost:2121` by running the following command:
-
-```sh
-pnpm run dev
-```
-
-You can also build the project and get the distribution files inside the `dist/` folder by running:
-
-```sh
-pnpm run build
-```
-
-Then, you can preview the generated build with a local web server:
-
-```sh
-pnpm run preview
-```
-
-For deployment, see the GitHub workflow, where you can plug your target (pre-configured for GitHub pages).
-See [docs.astro.build/en/guides/deploy](https://docs.astro.build/en/guides/deploy)
-
-Website is configured for static deployment, but you can flip it to **Server-Side rendering** by simply
-uncommenting `output: "server"` in the `./astro.config.mjs`.
-
----
-
-### Project Structure
-
-After cloning this repository, you'll find the following (simplified) structure:
-
-```sh
-🛬
-├── 💧 data
-│   └── **/*.json                        # Satic data sources for REST etc.
-│
-└── src
-    │
-    ├── 🧱 app
-    │   └── **/*.astro                   # Application-wide components
-    │
-    ├── 🌠 assets
-    │   └── **/*.{svg,…}                 # Transformable assets
-    │
-    ├── 🧱 components
-    │   └── **/*.astro                   # Simple, atomic UI elements
-    │
-    ├── 📚 lib
-    │   └── **/*.ts                      # Utilities (Databases, APIs…)
-    │
-    ├── 🧱 modules
-    │   └── **/*.astro                   # Complex views made of elements
-    │
-    ├── 📑 pages
-    │   ├── **/*.astro                   # File-based client routes
-    │   │
-    │   └── 🌐 api
-    │        └── [...entities].ts        # Catch-all endpoint for CRUD ops.
-    │
-    ├── 🚀 services
-    │   └── *.ts                         # Server-side CRUD operations
-    │
-    └── 📐 types
-        └── *.ts                         # Data entities typings
-
-```
-
-### 🛠 Tools
-
-Efforts have been put on fast **onboarding** and **developer experience**.
-
-This project comes with extensive support for TypeScript, Astro, Tailwind, and VS Code.  
-It is configured with sensible defaults, a bit of opinions, plus some tricks to make it plays nice together.
-
-- **TypeScript**: _strictest_ Astro's settings. Full-stack, type-safe code base
-- **ESLint**: featuring `astro-eslint-parser` + `eslint-plugin-astro`
-- **Prettier**: featuring `prettier-plugin-astro` (bundled with `astro`)
-- **Editorconfig**: conforming with prettier
-- **VS Code**: extensions recommendations, tooling settings
-- **Tailwind**: Astro integration (using Vite and PostCSS)
-- **Flowbite**: dependencies (core, typography), settings
-- **GitHub**: a [pre-configured workflow](https://github.com/themesberg/flowbite-astro-admin-dashboard/tree/main/.github/workflows) for deployment (using PNPM cache)
-- **Sandboxes**: project is tested against and fully compatible with web containers
-
-Feel free to hack those settings to cater for your own needs.
-
-<div align="center">
-<a href="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"><img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"></a>
-<a href="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"><img class="w-full rounded-md overflow-hidden" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"></a>
-<a href="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"><img class="w-full rounded-md overflow-hidden" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"></a>
-</div>
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<div align="center" class="flex justify-between w-full">
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-</div>
-
-## Resources
-
-- Live preview: <https://themesberg.github.io/flowbite-astro-admin-dashboard/>
-
-- Flowbite documentation: <https://flowbite.com/docs/getting-started/introduction/>
-- Tailwind CSS documentation: <https://tailwindcss.com/>
-- License Agreement: <https://flowbite.com/docs/getting-started/license/>
-- Issues: [Github Issues Page](https://github.com/themesberg/flowbite-admin-dashboard/issues)
-
-### JavaScript Frameworks
-
-Here's a list of compatible technologies and guides for Flowbite and Tailwind CSS:
-
-The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
-
-- [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
-- [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)
-- [🎸 Flowbite Svelte Library](https://github.com/themesberg/flowbite-svelte)
-- [📕 Flowbite Angular Library](https://github.com/themesberg/flowbite-angular)
-
-We also wrote integration guides for the following front-end frameworks and libraries:
-
-- [📝 Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
-- [📝 Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
-- [📝 Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
-- [📝 Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
-- [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
-
-### Back-end Frameworks
-
-Flowbite has a great integration with most of the back-end frameworks because it relies on vanilla JavaScript:
-
-- [📚 Using Flowbite with Laravel](https://flowbite.com/docs/getting-started/laravel/)
-- [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
-- [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
-- [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for Flowbite Admin Dashboard. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of Flowbite Admin Dashboard. Check the CHANGELOG from your dashboard on the [GitHub releases page](https://github.com/themesberg/flowbite-admin-dashboard/releases).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://flowbite.com/contact/) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2019-2023 Bergside Inc. (https://flowbite.com)
-- Open-source under the [MIT License](https://github.com/themesberg/flowbite-admin-dashboard/blob/main/LICENSE)
-
-## Useful Links
-
-- 📚 [Flowbite Library](https://flowbite.com/) - Open-source components built with Tailwind CSS
-- 🎨 [Flowbite Figma](https://flowbite.com/figma/) - Design system built for Figma
-- 🧱 [Flowbite Blocks](https://flowbite.com/blocks/) - Building sections for website and applications
-- 💎 [Flowbite Pro](https://flowbite.com/pro/) - A larger collection of the open-source version of the latter three
-
-## Authors
-
-- [Julian Cataldo](https://twitter.com/Julian_Cataldo)
-- [Zoltán Szőgyényi](https://twitter.com/zoltanszogyenyi)
-- [Robert Tanislav](https://twitter.com/roberttanislav)
+To tackle the challenges outlined by the Ministry of Culture of the Slovak Republic, leveraging the Astro web framework for a data-driven application hosted on the Cloudflare Pages edge network presents a robust solution. Here's how we can address each aspect of the problem using Astro:
+Creating the Information System (IS):
+Astro's flexible architecture allows for the creation of a tailor-made IS that can efficiently manage registers of legal entities in the art, culture, and creative industries.
+Utilize Astro's modular approach to design a system that accommodates both public and private sections, ensuring data security and accessibility.
+Data Collection:
+Integrate automated data collection mechanisms within Astro to gather information from various sources like search engines, leveraging keywords relevant to cultural entities.
+Implement manual registration features within the system for entities not covered by automated methods.
+Categorization and Organization:
+Employ Astro's robust data structuring capabilities to categorize entities based on cultural sectors such as museums, theaters, design, etc.
+Ensure efficient data organization within the IS for streamlined access and retrieval.
+Import and Export of Data:
+Astro's compatibility with various data formats and APIs facilitates seamless import and export functionalities, enabling smooth data transfer between the IS and external sources like the Commercial Register, Finstat, etc.
+Output Data Generation:
+Leverage Astro's dynamic templating features to generate output data suitable for managerial decision-making, including reports, analytics, and visualizations.
+UI/UX Development:
+Utilize Astro's capabilities for frontend development to create visually appealing galleries, navigation menus, dynamic pages, and widgets.
+Ensure intuitive navigation and user experience within the IS, enhancing usability for both administrators and end-users.
+Statistical Processing:
+Implement automated statistical processing within Astro to analyze data trends, generate insights, and facilitate informed decision-making by the Ministry of Culture.
+
+
+
+Cloudflare Pages Edge Driven Microservices(cloud functions)
+Incorporating Astro with Cloudflare Pages offers several advantages, including global edge caching, enhanced security features, and scalability. By deploying the solution on Cloudflare's edge network, we ensure low latency and high performance, unlimited bandwidth at no cost, optimizing user experience even with large datasets.
+
+Cloudflare Workers can play a pivotal role in improving communication and implementing permissions within the application, especially regarding the status and editing history of registers. Here's how:
+Implementing Permissions:
+Cloudflare Workers can enforce fine-grained access controls and permissions within the application.
+By integrating with authentication systems or user management platforms, Workers can ensure that only authorized personnel can view or edit registers.
+Role-based access control (RBAC) can be implemented using Workers to assign different levels of access to users based on their roles or privileges within the organization.
+Versioning Registers with Cloudflare Buckets:
+Cloudflare Buckets offer a scalable and reliable solution for storing and managing data, including versions of registers.
+Each time a register is modified, Cloudflare Workers can automatically upload a new version of the register to a designated bucket in Cloudflare.
+This allows for the seamless tracking of register versions over time, ensuring that historical data is preserved and accessible when needed.
+Real-time Communication:
+Cloudflare Workers can facilitate real-time communication between internal personnel regarding the status of registers.
+Using WebSockets or server-sent events (SSE), Workers can establish persistent connections between users, enabling instant updates and notifications about register status changes or edits.
+This real-time communication mechanism ensures that all relevant stakeholders are promptly informed about any modifications to registers, minimizing communication gaps and delays.
+Tracking Editing History:
+Cloudflare Workers can be utilized to track and log the editing history of registers in real-time.
+Whenever a register is modified, Workers can capture relevant details such as the user who made the edit, the timestamp of the modification, and the nature of the changes.
+This editing history log can be stored securely and accessed by authorized personnel to track the lifecycle of registers and identify any discrepancies or issues in the editing process.
+Custom Endpoints and APIs:
+Cloudflare Workers allow for the creation of custom endpoints and APIs tailored to the specific needs of the application.
+Internal personnel can leverage these endpoints to query the status of registers, retrieve editing history, or perform other actions related to register management.
+Workers ensure fast response times and high availability, enabling seamless communication and data retrieval within the application.
+By leveraging Cloudflare Workers, the application can enforce permissions, facilitate real-time communication, and track editing history effectively, addressing the internal communication challenges surrounding registers and enhancing overall workflow efficiency.
+
+Data Collection With AI Data Cleaning and Processing 
+Employing a microservice serverless GPU architecture to execute a Named Entity Recognition (NER) span-marker-mbert-base-multinerd a SpanMarker model trained on the MultiNERD dataset. Offering a high-performance solution for identifying entities across data sources like search engines. This setup dynamically allocates GPU resources based on workload demands, ensuring efficient processing and scalability. With real-time entity recognition, organizations can extract valuable insights and make informed decisions, driving innovation in data-driven environments. Furthermore, the deployment of NER models is facilitated by the availability of free open-source models, such as those provided by Hugging Face, streamlining implementation and reducing development time.
+We can tune the model to also be able to recognize entities in slovikan as this model is already fine-tuned for multi-language support already currently working with en, es, fr, it, nl, pl, pt, ru and zh. With an overall precision rate of 93.39. Supporting Label sets such as PER(people), ORG(organization), LOC (location), ANIM (animal), CEL (celestial) ,DIS (disease), EVE (event), etc.
+
+The application will utilize an algorithm to compare entities in the database with those identified through Named Entity Recognition (NER). This assessment will determine the percentage of entities found by NER, guiding improvements in data coverage and NER accuracy for the Ministry of Culture of the Slovak Republic.
+
+Prior Training of this model is well documented making re-creation of experiments in another language or for additional Labels a very easy simple process.
+Astros Island Architecture 
+Astro's Island Architecture offers robust and modular design, allowing each application component to operate independently within its own island. This enables seamless integration of various node frameworks without conflicts. Islands represent distinct parts of the application, facilitating microservices-driven development where different services communicate via APIs. Despite diverse node frameworks used in each island, efficient data exchange ensures smooth operation of the overall application, optimizing scalability and performance. With Astro, developers leverage this flexibility to tap into a vast ecosystem of node frameworks and libraries, crafting tailored solutions for complex software challenges.
+
+Security 
+Integrating Astro-Auth with Lucia's OAuth implementation further strengthens the security and access control mechanisms of the application, ensuring secure authentication and authorization for accessing register data and versions. Here's how this integration enhances security and user management:
+Secure Authentication:
+Astro-Auth provides a robust authentication framework for verifying the identities of users accessing the application.
+Lucia's OAuth implementation enhances authentication by allowing users to authenticate using their existing credentials from trusted identity providers, such as Google, Microsoft, or custom OAuth providers.
+Authorization and Access Control:
+Once authenticated, Astro-Auth and Lucia work together to enforce fine-grained authorization policies for accessing register data and versions.
+Role-based access control (RBAC) can be implemented to define granular permissions based on user roles or attributes, ensuring that only authorized users can view or modify sensitive information.
+Token Management:
+Astro-Auth and Lucia manage authentication tokens securely, preventing unauthorized access to register data and versions.
+Lucia's OAuth implementation issues access tokens with limited scopes and lifetimes, reducing the risk of token misuse or unauthorized access to sensitive resources.
+Single Sign-On (SSO):
+Astro-Auth and Lucia support single sign-on (SSO) capabilities, allowing users to seamlessly access the application using their existing credentials without needing to log in repeatedly.
+This improves user experience while maintaining security by centralizing user authentication and access control across multiple services and applications.
+Audit Logging and Compliance:
+Astro-Auth and Lucia can generate detailed audit logs of user authentication and authorization events, providing a comprehensive trail of user activities for compliance and auditing purposes.
+Organizations can monitor and review user interactions with register data and versions to ensure compliance with regulatory requirements and internal policies.
+User Management and Provisioning:
+Astro-Auth and Lucia facilitate user management and provisioning by enabling administrators to manage user accounts, roles, and permissions centrally.
+Administrators can add, remove, or update user accounts and permissions dynamically, ensuring that access privileges align with organizational roles and responsibilities.
+By integrating Astro-Auth with Lucia's OAuth implementation, organizations can establish a robust authentication and authorization framework that enhances security, improves user experience, and ensures compliance with regulatory requirements. This integration streamlines user management and access control processes while providing granular control over user permissions and activities within the application.
+
+Chat Bot
+
+Integrating a Chat GPT agent with a knowledge base can significantly enhance user experience by providing assistance and clarifications regarding the application and its data. Here's how it works:
+User Interaction:
+Users can engage with the Chat GPT agent through a chat interface integrated into the application.
+They can ask questions or seek guidance on various aspects of the application, such as data sources, entity categorization, or navigating the user interface.
+Knowledge Base Integration:
+The Chat GPT agent is connected to a knowledge base containing information about the application, including FAQs, tutorials, and explanations of key features.
+The knowledge base is continuously updated with relevant information to ensure accuracy and relevance to user queries.
+Natural Language Understanding:
+The Chat GPT agent utilizes natural language processing (NLP) to understand user queries and extract relevant keywords and context.
+It analyzes the user's input to identify the intent behind the query and retrieve the most appropriate responses from the knowledge base.
+Assistance and Guidance:
+Based on the user's query, the Chat GPT agent provides helpful responses, explanations, or step-by-step instructions to address their concerns.
+It can guide users through various functionalities of the application, helping them understand how to access specific registers, interpret data, or perform tasks.
+Tagging System:
+The knowledge base is equipped with a tagging system that categorizes information based on relevant topics, features, or functionalities.
+Tags help the Chat GPT agent retrieve precise and accurate responses from the knowledge base, ensuring that users receive tailored assistance specific to their needs.
+Continuous Learning and Improvement:
+Through user interactions and feedback, the Chat GPT agent learns and adapts to better understand user queries and provide more accurate and helpful responses over time.
+It continuously updates its knowledge base with new information, FAQs, and user queries to enhance its effectiveness as a user support tool.
+By integrating a Chat GPT agent with a knowledge base, users can access personalized assistance and guidance in real-time, empowering them to navigate the application with ease and confidence while gaining deeper insights into the data it contains.
+
+chat
+In conclusion, leveraging the Astro web framework for building a data-driven application hosted on Cloudflare Pages presents a comprehensive solution to the Ministry of Culture's challenges, facilitating efficient management of registers for entities in the art, culture, and creative industries while ensuring data security and accessibility.
