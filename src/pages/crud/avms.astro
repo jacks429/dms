@@ -3,6 +3,9 @@ import LayoutSidebar from "../../app/LayoutSidebar.astro";
 import CrudAVMS from "../../modules/CrudAVMS.astro";
 ---
 
+export const prerender = true;
+
+
 <LayoutSidebar>
 	<CrudAVMS/>
 </LayoutSidebar>

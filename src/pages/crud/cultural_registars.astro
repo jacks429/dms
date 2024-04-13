@@ -3,6 +3,8 @@ import LayoutSidebar from '../../app/LayoutSidebar.astro';
 import CrudCulturalRegisters from '../../modules/CrudCulturalRegisters.astro';
 ---
 
+export const prerender = true;
+
 <LayoutSidebar>
 	<CrudCulturalRegisters />
 </LayoutSidebar>

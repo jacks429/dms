@@ -3,6 +3,8 @@ import LayoutSidebar from '../../app/LayoutSidebar.astro';
 import CrudUsers from '../../modules/CrudUsers.astro';
 ---
 
+export const prerender = true;
+
 <LayoutSidebar>
 	<CrudUsers />
 </LayoutSidebar>
