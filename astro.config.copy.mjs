@@ -1,6 +1,5 @@
 
 
-import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
 const DEV_PORT = 2121;
@@ -24,7 +23,6 @@ export default defineConfig({
 
 	integrations: [
 		//
-		sitemap(),
 		tailwind(),
 	],
 });
