@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import db from "@astrojs/db";
+
 const DEV_PORT = 2121;
 
 
@@ -22,6 +22,6 @@ export default defineConfig({
 
 
   //
-  sitemap(), tailwind(), db()],
+  sitemap(), tailwind()],
   
 });
