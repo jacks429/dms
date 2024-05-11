@@ -4,19 +4,15 @@ import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare'
 
 export default defineConfig({
+	base: process.env.CI ? '/flowbite-astro-admin-dashboard' : undefined,
+	
   adapter: cloudflare(),
 	output: "server",
 	integrations: [
 		sitemap(), 
 		tailwind()
 	],
-	vite: {
-    build: {
-      minify: false,
-    },
-		
-
-	 }});
+		});
 	
 
 // const DEV_PORT = 2121;
