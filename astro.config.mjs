@@ -4,13 +4,18 @@ import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare'
 
 export default defineConfig({
-  output: "server",
   adapter: cloudflare(),
 	integrations: [
 		sitemap(), 
-		tailwind()],
+		tailwind()
+	],
+	vite: {
+    build: {
+      minify: false,
+    },
+		
 
-	});
+	 }});
 	
 
 // const DEV_PORT = 2121;
