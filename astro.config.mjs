@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import cloudflare from "@astrojs/cloudflare";
+import cloudflare from '@astrojs/cloudflare'
 
 const DEV_PORT = 2121;
 
@@ -19,8 +20,10 @@ export default defineConfig({
     port: DEV_PORT
   },
   integrations: [
+
+
   //
-  tailwind()],
+  sitemap(), tailwind()],
   output: "server",
   adapter: cloudflare()
 });
