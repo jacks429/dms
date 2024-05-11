@@ -21,7 +21,7 @@ export default defineConfig({
   },
   integrations: [
   //
-  tailwind()],
+  sitemap(), tailwind()],
   output: "server",
   adapter: cloudflare()
 });
