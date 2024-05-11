@@ -1,7 +1,7 @@
 ---
 /* http://localhost:2121/playground/data/ */
 
-// import Code from 'astro/components/Code.astro';
+import Code from 'astro/components/Code.astro';
 import LayoutSidebar from '../../app/LayoutSidebar.astro';
 // import { getUsers, getProducts } from '../../services/index.js';
 
@@ -31,14 +31,14 @@ import LayoutSidebar from '../../app/LayoutSidebar.astro';
 				<h1 class="text-6xl font-bold mb-8 dark:text-slate-100">Products</h1>
 			</a>
 
-			<!-- <Code code={products} lang="json" /> -->
+			<Code code={products} lang="json" />
 		</div>
 		<div class="mb-16">
 			<a href="/api/users" target="_blank">
 				<h1 class="text-6xl font-bold mb-8 dark:text-slate-100">Users</h1>
 			</a>
 
-			<!-- <Code code={users} lang="json" /> -->
+			<Code code={users} lang="json" />
 		</div>
 	</div>
 </LayoutSidebar>
