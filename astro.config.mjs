@@ -3,37 +3,27 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare'
 
+const DEV_PORT = 8788;
+
+
+// https://astro.build/config
 export default defineConfig({
-  output: "server",
-  adapter: cloudflare(),
-	integrations: [
-		sitemap(), 
-		tailwind()],
+  site: process.env.CI ? 'https://themesberg.github.io' : `http://localhost:${DEV_PORT}`,
+  base: process.env.CI ? '/flowbite-astro-admin-dashboard' : undefined,
+  // output: 'server',
 
-	});
-	
+  /* Like Vercel, Netlify,… Mimicking for dev. server */
+  // trailingSlash: 'always',
 
-// const DEV_PORT = 2121;
-
-
-// // https://astro.build/config
-// export default defineConfig({
-//   site: process.env.CI ? 'https://themesberg.github.io' : `http://localhost:${DEV_PORT}`,
-//   base: process.env.CI ? '/flowbite-astro-admin-dashboard' : undefined,
-//   // output: 'server',
-
-//   /* Like Vercel, Netlify,… Mimicking for dev. server */
-//   // trailingSlash: 'always',
-
-//   server: {
-//     /* Dev. server only */
-//     port: DEV_PORT
-//   },
-//   integrations: [
+  server: {
+    /* Dev. server only */
+    port: DEV_PORT
+  },
+  integrations: [
 
 
-  
-//   sitemap(), tailwind()],
-//   output: "server",
-//   adapter: cloudflare()
-// });
+  //
+  sitemap(), tailwind()],
+  output: 'server',
+  adapter: cloudflare()
+});
