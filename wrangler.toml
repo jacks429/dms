@@ -7,3 +7,4 @@ binding = "DB"
 database_name = "dms"
 database_id = "0f4195f6-b338-4af4-8963-3c7798923303"
 
+compatibility_flags = [ "transformstream_enable_standard_constructor", "streams_enable_constructors" ]
