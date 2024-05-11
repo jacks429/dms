@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare'
 
-const DEV_PORT = 2121;
+const DEV_PORT = 8788;
 
 
 // https://astro.build/config
@@ -24,6 +24,6 @@ export default defineConfig({
 
   //
   sitemap(), tailwind()],
-  output: "server",
+  output: 'server',
   adapter: cloudflare()
 });

@@ -1,2 +1,8 @@
 name = "dms"
 pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dms"
+database_id = "0f4195f6-b338-4af4-8963-3c7798923303"
+
